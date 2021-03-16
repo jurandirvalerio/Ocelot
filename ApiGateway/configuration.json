@@ -1,0 +1,31 @@
+{
+	"ReRoutes": [
+		{
+			"DownstreamPathTemplate": "/{everything}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 51094
+				}
+			],
+			"UpstreamPathTemplate": "/api1/{everything}",
+			"UpstreamHttpMethod": [ "Get" ]
+		},
+		{
+			"DownstreamPathTemplate": "/{everything}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 51129
+				}
+			],
+			"UpstreamPathTemplate": "/api2/{everything}",
+			"UpstreamHttpMethod": [ "Get" ]
+		}
+	],
+	"GlobalConfiguration": {
+		"BaseUrl": "https://localhost:51111"
+	}
+}
